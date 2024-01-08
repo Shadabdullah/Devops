@@ -1,0 +1,21 @@
+name: Action Demo
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print a message
+        run: echo "Hello, this is an Action Demo"
+  goodbye:
+    runs-on: windows-latest
+    steps:
+      - name: Windows Operating
+        run: echo "Goodbye"
